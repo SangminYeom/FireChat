@@ -16,7 +16,7 @@ struct Message {
     
     let isFromCurrentUser: Bool
     
-    init(dictionary: [String: AnyObject]) {
+    init(dictionary: [String: Any]) {
         self.text = dictionary["text"] as? String ?? ""
         self.toId = dictionary["toId"] as? String ?? ""
         self.fromId = dictionary["fromId"] as? String ?? ""
@@ -24,4 +24,9 @@ struct Message {
         
         self.isFromCurrentUser = fromId == Auth.auth().currentUser?.uid
     }
+}
+
+struct Conversation {
+    let user:User
+    let message:Message
 }

@@ -28,6 +28,10 @@
 		839B042E27BE22F4000E8E74 /* ConversationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839B042D27BE22F4000E8E74 /* ConversationController.swift */; };
 		839B043327BE3D78000E8E74 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839B043227BE3D78000E8E74 /* LoginController.swift */; };
 		839B043527BE3D82000E8E74 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839B043427BE3D82000E8E74 /* RegistrationController.swift */; };
+		83DDA3D227CC9AC10061C607 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDA3D127CC9AC10061C607 /* ConversationCell.swift */; };
+		83DDA3D427CC9E0A0061C607 /* ConversationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDA3D327CC9E0A0061C607 /* ConversationViewModel.swift */; };
+		83DDA3D627CCDC850061C607 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDA3D527CCDC850061C607 /* ProfileController.swift */; };
+		83DDA3D827CCDD640061C607 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DDA3D727CCDD640061C607 /* ProfileHeader.swift */; };
 		83E337B427C5F01F00B7C011 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E337B327C5F01F00B7C011 /* User.swift */; };
 		83E337B627C5F08400B7C011 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E337B527C5F08400B7C011 /* Service.swift */; };
 		83E337B827C64BBA00B7C011 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E337B727C64BBA00B7C011 /* ChatController.swift */; };
@@ -88,6 +92,10 @@
 		839B042D27BE22F4000E8E74 /* ConversationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationController.swift; sourceTree = "<group>"; };
 		839B043227BE3D78000E8E74 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		839B043427BE3D82000E8E74 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		83DDA3D127CC9AC10061C607 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
+		83DDA3D327CC9E0A0061C607 /* ConversationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewModel.swift; sourceTree = "<group>"; };
+		83DDA3D527CCDC850061C607 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		83DDA3D727CCDD640061C607 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		83E337B327C5F01F00B7C011 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		83E337B527C5F08400B7C011 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		83E337B727C64BBA00B7C011 /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
@@ -208,6 +216,8 @@
 				838B9B6B27C50BC100B0DB30 /* UserCell.swift */,
 				83E337B927C6523B00B7C011 /* CustomInputAccessoryView.swift */,
 				83E9811727C74E7500B79A21 /* MessageCell.swift */,
+				83DDA3D127CC9AC10061C607 /* ConversationCell.swift */,
+				83DDA3D727CCDD640061C607 /* ProfileHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -218,6 +228,7 @@
 				83113EF627C37B3F00EB7DC2 /* LoginViewModel.swift */,
 				83113EF827C3AC8D00EB7DC2 /* RegistrationViewModel.swift */,
 				83E9811B27C75AEF00B79A21 /* MessageViewModel.swift */,
+				83DDA3D327CC9E0A0061C607 /* ConversationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -229,6 +240,7 @@
 				839B042D27BE22F4000E8E74 /* ConversationController.swift */,
 				838B9B6927C5080800B0DB30 /* NewMessageController.swift */,
 				83E337B727C64BBA00B7C011 /* ChatController.swift */,
+				83DDA3D527CCDC850061C607 /* ProfileController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -523,21 +535,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83DDA3D627CCDC850061C607 /* ProfileController.swift in Sources */,
 				839B03FC27BE226A000E8E74 /* ViewController.swift in Sources */,
 				83E9811E27C7656600B79A21 /* Constants.swift in Sources */,
 				83113EF927C3AC8D00EB7DC2 /* RegistrationViewModel.swift in Sources */,
 				839B03F827BE226A000E8E74 /* AppDelegate.swift in Sources */,
 				838B9B6827C4A2D800B0DB30 /* AuthService.swift in Sources */,
 				83E9811C27C75AEF00B79A21 /* MessageViewModel.swift in Sources */,
+				83DDA3D227CC9AC10061C607 /* ConversationCell.swift in Sources */,
 				839B042E27BE22F4000E8E74 /* ConversationController.swift in Sources */,
 				839B03FA27BE226A000E8E74 /* SceneDelegate.swift in Sources */,
 				838B9B6C27C50BC100B0DB30 /* UserCell.swift in Sources */,
 				839B043527BE3D82000E8E74 /* RegistrationController.swift in Sources */,
 				83E337B427C5F01F00B7C011 /* User.swift in Sources */,
 				83E337B627C5F08400B7C011 /* Service.swift in Sources */,
+				83DDA3D427CC9E0A0061C607 /* ConversationViewModel.swift in Sources */,
 				83E9811827C74E7500B79A21 /* MessageCell.swift in Sources */,
 				839B043327BE3D78000E8E74 /* LoginController.swift in Sources */,
 				83113EEB27C348F900EB7DC2 /* InputContainterView.swift in Sources */,
+				83DDA3D827CCDD640061C607 /* ProfileHeader.swift in Sources */,
 				83113EE927C3142A00EB7DC2 /* Extensions.swift in Sources */,
 				83113EF727C37B3F00EB7DC2 /* LoginViewModel.swift in Sources */,
 				83E337B827C64BBA00B7C011 /* ChatController.swift in Sources */,
