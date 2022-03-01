@@ -40,6 +40,9 @@
 		83E9811A27C7581600B79A21 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E9811927C7581600B79A21 /* Message.swift */; };
 		83E9811C27C75AEF00B79A21 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E9811B27C75AEF00B79A21 /* MessageViewModel.swift */; };
 		83E9811E27C7656600B79A21 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E9811D27C7656600B79A21 /* Constants.swift */; };
+		83EC880A27CE05850068EEAA /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EC880927CE05850068EEAA /* ProfileViewModel.swift */; };
+		83EC880C27CE06730068EEAA /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EC880B27CE06730068EEAA /* ProfileCell.swift */; };
+		83EC880E27CE20880068EEAA /* ProfileFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EC880D27CE20880068EEAA /* ProfileFooter.swift */; };
 		9310CAFB09AA5F7D6E5687D0 /* Pods_FireChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED649ED8D0272C3168486732 /* Pods_FireChatTests.framework */; };
 		EED4F8EAE7ABF91A88499D7A /* Pods_FireChat_FireChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB9515382F6267AFF53FAF4 /* Pods_FireChat_FireChatUITests.framework */; };
 		F16E95CEBF5B779DD68A2AE4 /* Pods_FireChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EF7FF5EA96564B838B697A /* Pods_FireChat.framework */; };
@@ -104,6 +107,9 @@
 		83E9811927C7581600B79A21 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		83E9811B27C75AEF00B79A21 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		83E9811D27C7656600B79A21 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		83EC880927CE05850068EEAA /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		83EC880B27CE06730068EEAA /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		83EC880D27CE20880068EEAA /* ProfileFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFooter.swift; sourceTree = "<group>"; };
 		8AC58B6B5E5896C2C37A5EFF /* Pods-FireChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireChatTests.release.xcconfig"; path = "Target Support Files/Pods-FireChatTests/Pods-FireChatTests.release.xcconfig"; sourceTree = "<group>"; };
 		9CB9515382F6267AFF53FAF4 /* Pods_FireChat_FireChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireChat_FireChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD29B1AA6D45058D466C76C7 /* Pods-FireChat-FireChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireChat-FireChatUITests.release.xcconfig"; path = "Target Support Files/Pods-FireChat-FireChatUITests/Pods-FireChat-FireChatUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -218,6 +224,8 @@
 				83E9811727C74E7500B79A21 /* MessageCell.swift */,
 				83DDA3D127CC9AC10061C607 /* ConversationCell.swift */,
 				83DDA3D727CCDD640061C607 /* ProfileHeader.swift */,
+				83EC880B27CE06730068EEAA /* ProfileCell.swift */,
+				83EC880D27CE20880068EEAA /* ProfileFooter.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -229,6 +237,7 @@
 				83113EF827C3AC8D00EB7DC2 /* RegistrationViewModel.swift */,
 				83E9811B27C75AEF00B79A21 /* MessageViewModel.swift */,
 				83DDA3D327CC9E0A0061C607 /* ConversationViewModel.swift */,
+				83EC880927CE05850068EEAA /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -538,15 +547,18 @@
 				83DDA3D627CCDC850061C607 /* ProfileController.swift in Sources */,
 				839B03FC27BE226A000E8E74 /* ViewController.swift in Sources */,
 				83E9811E27C7656600B79A21 /* Constants.swift in Sources */,
+				83EC880A27CE05850068EEAA /* ProfileViewModel.swift in Sources */,
 				83113EF927C3AC8D00EB7DC2 /* RegistrationViewModel.swift in Sources */,
 				839B03F827BE226A000E8E74 /* AppDelegate.swift in Sources */,
 				838B9B6827C4A2D800B0DB30 /* AuthService.swift in Sources */,
 				83E9811C27C75AEF00B79A21 /* MessageViewModel.swift in Sources */,
+				83EC880E27CE20880068EEAA /* ProfileFooter.swift in Sources */,
 				83DDA3D227CC9AC10061C607 /* ConversationCell.swift in Sources */,
 				839B042E27BE22F4000E8E74 /* ConversationController.swift in Sources */,
 				839B03FA27BE226A000E8E74 /* SceneDelegate.swift in Sources */,
 				838B9B6C27C50BC100B0DB30 /* UserCell.swift in Sources */,
 				839B043527BE3D82000E8E74 /* RegistrationController.swift in Sources */,
+				83EC880C27CE06730068EEAA /* ProfileCell.swift in Sources */,
 				83E337B427C5F01F00B7C011 /* User.swift in Sources */,
 				83E337B627C5F08400B7C011 /* Service.swift in Sources */,
 				83DDA3D427CC9E0A0061C607 /* ConversationViewModel.swift in Sources */,
