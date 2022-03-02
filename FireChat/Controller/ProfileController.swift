@@ -120,4 +120,3 @@ extension ProfileController: ProfileFooterDelegate {
         present(alert, animated: true, completion: nil)
     }
 }
-

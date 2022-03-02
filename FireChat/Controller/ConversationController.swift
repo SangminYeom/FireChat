@@ -15,6 +15,7 @@ class ConversationController: UIViewController {
     // MARK: - Properties
     private let tableView = UITableView()
     private var conversations = [Conversation]()
+    private var conversationDictionary = [String:Conversation]()
     
     private let newMessageButton: UIButton = {
         let button = UIButton(type: .system)
@@ -60,7 +61,14 @@ class ConversationController: UIViewController {
     // MARK: - APIs
     func fetchConversations() {
         Service.fetchConversations { conversations in
-            self.conversations = conversations
+ 
+            conversations.forEach { conversation in
+                let message = conversation.message
+                self.conversationDictionary[message.chatPartnerId] = conversation
+                
+            }
+            self.conversations = Array(self.conversationDictionary.values)
+            
             self.tableView.reloadData()
         }
     }
@@ -86,6 +94,9 @@ class ConversationController: UIViewController {
     func presentLoginScreen() {
         DispatchQueue.main.async {
             let controller = LoginController()
+            
+            controller.delegate = self
+            
             let nav = UINavigationController(rootViewController: controller)
             
             nav.modalPresentationStyle = .fullScreen
@@ -167,5 +178,13 @@ extension ConversationController: NewMessageControllerDelegate {
 extension ConversationController: ProfileControllerDelegate {
     func handleLogout() {
         logout()
+    }
+}
+
+extension ConversationController: AuthenticationDelegate {
+    func authenticationComplete() {
+        dismiss(animated: true, completion: nil)
+        configureUI()
+        fetchConversations()
     }
 }

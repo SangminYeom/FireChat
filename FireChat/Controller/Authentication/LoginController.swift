@@ -13,9 +13,15 @@ protocol AuthenticationContollerProtocol {
     func checkFormsStatus()
 }
 
+protocol AuthenticationDelegate : AnyObject {
+    func authenticationComplete()
+}
+
 class LoginController: UIViewController {
     // MARK: - Properties
     private var viewModel = LoginViewModel()
+    
+    weak var delegate: AuthenticationDelegate?
     
     private let iconImage: UIImageView = {
         let iv = UIImageView()
@@ -100,15 +106,14 @@ class LoginController: UIViewController {
                 return
             }
             
-            // conversationController에서 loginController를 rootview로 갖는 navigationController를 present 했으니...
-            // dismiss로 내려준다.
             self.showLoader(false)
-            self.dismiss(animated: true, completion: nil)
+            self.delegate?.authenticationComplete()
         }
     }
     
     @objc func handleShowSignup() {
         let controller = RegistrationController()
+        controller.delegate = delegate
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
